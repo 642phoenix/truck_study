@@ -41,10 +41,3 @@ font-weight:bold}
 
 #click{font-size: 30px;
 border: 5px solid grey;}
-
-@font-face {
-    font-family: Arizona;
-    src: url(./arizonia/Arizonia-Regular.ttf);
-  }
-
-#create_profile{font-family: azizonia;}
