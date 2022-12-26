@@ -5,8 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
+    <div id="form_page">
+        <h2>Sign Up Here</h2>
+      <form action="/action_page.php" target="_blank" method="get">
+       <fieldset>
+        <label for="firstname">
+            First name: 
+            
+            <input id="firstname" name="firstname" type="text" placeholder="First name" required>
+           
+        </label>
+        <br>
+
+        <label for="lastname">
+            Last name: 
+            
+            <input id="lastname" name="lastname" type="text" placeholder="Last name" required>
+            
+        </label>
+        <br>
+
+        <label for="email">
+            Email: 
     
+            <input id="email" name="email" type="email" placeholder="Email" required>
+            
+        </label>
+        <br>
+
+        <label for="password">
+            Password: 
+    
+                <input id="password" name="password" type="password" placeholder="Create Password" required>
+            
+            </label>
+            <br>
+            <label>
+                Click to Submit Form
+        <input type="button" value="Click Here" id="click">
+        </label>
+       </fieldset>
+       <hr>
+      </form>
+    </div>
 </body>
 </html>
