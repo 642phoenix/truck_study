@@ -1,0 +1,259 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background-color: black;
+  color: red;
+}
+
+#container {
+  position: absolute;
+  margin: auto;
+  width: 100vw;
+  height: 80pt;
+  top: 0;
+  bottom: 0;
+
+  filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 80pt;
+
+  text-align: center;
+
+  user-select: none;
+}
+
+button {
+  border: none;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+}
+
+.div {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.psuedo-text {
+  color: #FF0000;
+  position: relative;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: inline;
+  height: auto;
+  font-size: 1.7rem;
+  font-size: 700;
+  transition: 0.25s ease-in;
+  transition-delay: 0.1s;
+}
+
+.flex-1 {
+  flex: 1;
+  min-width: 250px;
+  margin: 0 auto 50px;
+}
+
+.button {
+  padding: 2rem 7rem;
+  background: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  will-change: transform;
+}
+
+.button-mat {
+  color: #FF0000;
+  border: 0px transparent;
+  border-radius: 0.3rem;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.35s;
+  overflow: hidden;
+}
+.button-mat:before {
+  content: "";
+  display: block;
+  background: #FF0000;
+  position: absolute;
+  width: 200%;
+  height: 500%;
+  border-radius: 100%;
+  transition: 0.36s cubic-bezier(0.4, 0, 1, 1);
+}
+.button-mat:hover .psuedo-text {
+  color: white;
+}
+.button-mat:hover {
+  color: transparent;
+}
+
+
+.btn-3 {
+  letter-spacing: 0.05rem;
+  position: relative;
+  background: white;
+  color: #FF0000;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  border-radius: 0.3rem;
+  z-index: 1;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.btn-3:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transform: scale(0.95);
+}
+
+
+
+@-webkit-keyframes mask-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(129px);
+  }
+}
+@keyframes mask-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(129px);
+  }
+}
+@-webkit-keyframes mask-inner-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-129px);
+  }
+}
+@keyframes mask-inner-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-129px);
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+.focus {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  position: relative;
+  width: 179px;
+}
+.focus:before {
+  content: "TRUCK STUDY";
+  filter: blur(3px);
+}
+.focus:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: calc(100% + 8px);
+  top: -4px;
+  left: 0;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  -webkit-animation: mask-move 1s linear infinite alternate;
+          animation: mask-move 1s linear infinite alternate;
+}
+.focus--mask {
+  overflow: hidden;
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+  -webkit-animation: mask-move 1s linear infinite alternate;
+          animation: mask-move 1s linear infinite alternate;
+}
+.focus--mask-inner {
+  -webkit-animation: mask-inner-move 1s linear infinite alternate;
+          animation: mask-inner-move 1s linear infinite alternate;
+}
+
+
+.stack{
+  display: grid;
+  grid-template-areas: "stack";
+  width: 12rem;
+  height: 12rem;
+  margin: 100px auto;
+}
+.stack > img {
+  width: 100%;
+  aspect-ratio: 1; /* rogne l'image */
+  grid-area: stack;
+  object-fit: cover;
+  box-shadow: 0 0 0.5rem rgb(0 0 0 / .2);
+  border: solid 0.5rem white;
+  border-bottom:  solid 2rem white;
+  border-radius: 0.5rem;
+  transition: transform 200ms;
+}
+.stack > img:nth-child(1){
+  transform: rotate(5deg)
+  translateX(1.25rem)
+  translateY(-1.25rem);
+}
+.stack > img:nth-child(2){
+  transform: rotate(-10deg)
+  translateX(-1.25rem);
+}
+.stack > img:nth-child(3){
+  transform: rotate(0deg)
+}
+
+/* hover effect */
+.stack > img:hover{
+  z-index:1;
+  cursor: pointer;
+}
+.stack:hover > img:nth-child(1){
+  transform: rotate(10deg)
+  translateX(5.5rem)
+  translateY(-2.5rem);
+}
+.stack:hover > img:nth-child(2){
+  transform: rotate(-20deg)
+  translateX(-5.75rem);
+}
+.stack:hover > img:nth-child(3){
+  transform: rotate(0deg);
+}
+
