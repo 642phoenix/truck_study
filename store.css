@@ -12,7 +12,8 @@
 }
 
 img{
-    width: 50px;
-    height:100;
-    
+    width:150px;
+    height:150px;
+    position: absolute;
+    bottom: 40px;
 }
