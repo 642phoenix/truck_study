@@ -11,15 +11,9 @@ div{
     background-color: rgb(251, 11, 11);
     height:150px;
     width:150px;
-    border:5px soild black;
+    border:5px solid black;
 }
 
 
 
 
-img{
-    width:150px;
-    height:150px;
-    position: relative;
-    top : 70px;
-}
