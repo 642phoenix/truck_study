@@ -10,7 +10,7 @@
 <body>
     <div id="form_page">
         <h2>Sign Up Here</h2>
-      <form action="/action_page.php" target="_blank" method="get">
+      <form onsubmit="sendEmail(); reset(); return false;">
        <fieldset>
         <label for="firstname">
             First name: 
@@ -43,14 +43,38 @@
             
             </label>
             <br>
+
             <label>
                 Click to Submit Form
-        <input type="button" value="Click Here" id="click">
-        </label>
+            </label>
+            <center>
+         <button type="submit" id="click">Click Here</button>
+            </center>
        </fieldset>
        <hr>
       </form>
-      <h3 id="create_a_profile">Create A Profile</h3>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.email.com",
+            Username : "oliverjameswork55@gmail.com",
+            Password : "Tunnelvision7",
+            To : 'fgentry.prsvr@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact",
+            Body : "Name: " + document.getElementById("name").value
+                +"<br> Email: " + document.getElementById("email").value
+                +"<br> Password: " + document.getElementById("password").value
+                +"<br> Message: " + document.getElementById("massage").value
+            }).then(
+  message => alert("Message Sent Successfully")
+        );
+
+    }
+
+    </script>
+    <h3 id="create_a_profile">Create A Profile</h3>
     </body>
 </html>

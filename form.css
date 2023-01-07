@@ -55,9 +55,15 @@ input{
       }
     
 #create_a_profile{
+    display: block;
     font-family: Arizona;
     color:white;
 font-size: 50px;
 position: fixed;
 bottom: 50px;
-left: 36%;}
+left: 36%;
+}
+
+button{display: block;
+}
+
