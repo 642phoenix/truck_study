@@ -7,6 +7,12 @@ body {
   background-color: black;
   color: red;
 }
+#container_hair{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 #container {
   position: absolute;
@@ -24,12 +30,9 @@ body {
   position: absolute;
   width: 100%;
   display: inline-block;
-
   font-family: "Raleway", sans-serif;
   font-size: 80pt;
-
   text-align: center;
-
   user-select: none;
 }
 
@@ -174,6 +177,7 @@ button {
   line-height: 1;
   position: relative;
   width: 179px;
+  text-align: center;
 }
 .focus:before {
   content: "TRUCK STUDY";
@@ -217,7 +221,7 @@ button {
 }
 .stack > img {
   width: 100%;
-  aspect-ratio: 1; /* rogne l'image */
+  aspect-ratio: 1; 
   grid-area: stack;
   object-fit: cover;
   box-shadow: 0 0 0.5rem rgb(0 0 0 / .2);
